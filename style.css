@@ -1,0 +1,25 @@
+#slider .slider-selection {
+	background: #b2b2ff;
+}
+
+.inl-bl {
+  display: inline-block;
+}
+
+/* Color picker styles */
+
+.custom-size .colorpicker-saturation {
+  width: 250px;
+  height: 250px;
+}
+
+.custom-size .colorpicker-hue,
+.custom-size .colorpicker-alpha {
+  width: 40px;
+  height: 250px;
+}
+
+.custom-size .colorpicker-color,
+.custom-size .colorpicker-color div {
+  height: 40px;
+}

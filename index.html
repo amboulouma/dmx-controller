@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DMX Controller</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <!-- bootstrap4-toggle library -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <!-- bootstrap slider library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.css" />
+    <!-- Color picker library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.css" />
+
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <h1>DMX Controller</h1>
+    <div class="container">
+      <div class="row">
+        <!-- Buttons -->
+        <div class="col list-group"> 
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+            <div class="mb-1">Control: <input type="checkbox" checked data-toggle="toggle" data-size="sm"></div>
+        </div>
+        <!-- Sliders -->
+        <div class="col list-group">
+            <div class="mb-2">Control: <input id="slider1" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider2" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider3" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider4" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider5" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider6" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider7" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider8" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider9" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider10" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider11" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider12" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider13" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider14" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider15" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider16" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider17" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider18" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider19" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+            <div class="mb-2">Control: <input id="slider20" data-slider-id='slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/></div>
+        </div>
+        <!-- Color picker -->
+        <div class="col">
+            <input id="color-picker" type="text" class="form-control" value="red"/>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- bootstrap4-toggle library -->
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+    <!-- bootstrap slider library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js"></script>
+    <!-- Color picker library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.js"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
