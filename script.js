@@ -1,156 +1,74 @@
 $(document).ready(function(){
 
-    /* Sliders controller */
+    createComponent("#component-list", "Spot scène PAR56 LED RGB", "par-56-led-rgb-0", 7, 0);
 
-    for(var i=0; i<18; i++) {
-        $('#slider-' + i).slider();
-        $("#hex-value-" + i).text(sliderToHex(($('#slider-' + i).slider('getValue'))));
+    /* Spot scène PAR56 LED RGB * 4 */
+
+    function createComponent(parent, name, componentId, channels, beginninAdress) {
+        var $div = $("<div>", {id: componentId, class: "mb-1 dmx-component"}).css("margin", "5px"); 
+        var $name = $("<h4>").append(name);
+        $div.append($name);
+        for (var i = 0; i<channels; i++) {
+            createDMXChannel($div, componentId, i, beginninAdress);
+            beginninAdress+= 1;
+        }
+        $(parent).append($div);
     }
 
-    /* Slider 0 */
+    /* Function to create a DMX channel */
 
-    $('#slider-0').on("slide", function(slideEvt) {
-        $("#hex-value-" + 0).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 0).text(sliderToHex(changeEvt.value.newValue));
-    });
+    function createDMXChannel(parent, componentId, channelId, adress) {
+        var $div = $("<div>", {id: componentId + "-" + channelId +"-channel", class: "mb-1 dmx-channel"}).css("margin", "5px");
 
-    /* Slider 1 */
+        /* Tram adress */ 
 
-    $('#slider-1').on("slide", function(slideEvt) {
-        $("#hex-value-" + 1).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 1).text(sliderToHex(changeEvt.value.newValue));
-    });
+        var $spanAdress = $("<span>", {
+                                        id: componentId + "-" + channelId + "-adress", 
+                                        class:"dmx-adress"
+                                    }).css("margin", "5px");  
 
-    /* Slider 2 */
+        $spanAdress.append(adress);
 
-    $('#slider-2').on("slide", function(slideEvt) {
-        $("#hex-value-" + 2).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 2).text(sliderToHex(changeEvt.value.newValue));
-    });
+        /* The On / Off switch*/
 
-    /* Slider 3 */
+        var $onOff = $('<label>', {class:"switch"}).css("margin", "5px");
+        var $input = $('<input>', {id: componentId + "-" + channelId + "-switch", class: "dmx-switch", type:"checkbox"});
+        var $span = $('<span>', {class:"switch-slider round"});
+        
+        $onOff.append($input);
+        $onOff.append($span);
 
-    $('#slider-3').on("slide", function(slideEvt) {
-        $("#hex-value-" + 3).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 3).text(sliderToHex(changeEvt.value.newValue));
-    });
+        /* The Slider */
 
-    /* Slider 4 */
+        var $slider = $('<input>' , {
+                                        id:componentId + "-" + channelId + "-slider", 
+                                        class:"dmx-slider", 
+                                        type:"range", 
+                                        min:"1", 
+                                        max:"20", 
+                                        step: "1", 
+                                        value:"7", 
+                                        class:"slider"
+                                    }).css("margin", "5px");
 
-    $('#slider-4').on("slide", function(slideEvt) {
-        $("#hex-value-" + 4).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 4).text(sliderToHex(changeEvt.value.newValue));
-    });
+        /* The Hex Value */
 
-    /* Slider 5 */
+        var $spanHexValue = $('<span>', {id: componentId + "-" + channelId + "-hex-value", class:"dmx-hex-value"}).css("margin", "5px");
+        
+        $spanHexValue.text(sliderToHex(($slider.attr("value"))));
 
-    $('#slider-5').on("slide", function(slideEvt) {
-        $("#hex-value-" + 5).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 5).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 6 */
-
-    $('#slider-6').on("slide", function(slideEvt) {
-        $("#hex-value-" + 6).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 6).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 7 */
-
-    $('#slider-7').on("slide", function(slideEvt) {
-        $("#hex-value-" + 7).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 7).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 8 */
-
-    $('#slider-8').on("slide", function(slideEvt) {
-        $("#hex-value-" + 8).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 8).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 9 */
-
-    $('#slider-9').on("slide", function(slideEvt) {
-        $("#hex-value-" + 9).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 9).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 10 */
-
-    $('#slider-10').on("slide", function(slideEvt) {
-        $("#hex-value-" + 10).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 10).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 11 */
-
-    $('#slider-11').on("slide", function(slideEvt) {
-        $("#hex-value-" + 11).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 11).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 12 */
-
-    $('#slider-12').on("slide", function(slideEvt) {
-        $("#hex-value-" + 12).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 12).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 13 */
-
-    $('#slider-13').on("slide", function(slideEvt) {
-        $("#hex-value-" + 13).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 13).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 14 */
-
-    $('#slider-14').on("slide", function(slideEvt) {
-        $("#hex-value-" + 14).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 14).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 15 */
-
-    $('#slider-15').on("slide", function(slideEvt) {
-        $("#hex-value-" + 15).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 15).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 16 */
-
-    $('#slider-16').on("slide", function(slideEvt) {
-        $("#hex-value-" + 16).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 16).text(sliderToHex(changeEvt.value.newValue));
-    });
-
-    /* Slider 17 */
-
-    $('#slider-17').on("slide", function(slideEvt) {
-        $("#hex-value-" + 17).text(sliderToHex(slideEvt.value));
-    }).on("change", function(changeEvt) {
-        $("#hex-value-" + 17).text(sliderToHex(changeEvt.value.newValue));
-    });
-
+        $slider.on("change", function(changeEvt) {
+            $spanHexValue.text(sliderToHex(changeEvt.target.value));
+        });
+        
+        $div.append($spanAdress);
+        $div.append($onOff);
+        $div.append($slider);
+        $div.append("0x");
+        $div.append($spanHexValue);
+        
+        $(parent).append($div);
+    }
     
     function sliderToPercent($param) {
         return $param*0.05;
@@ -175,8 +93,8 @@ $(document).ready(function(){
     /* Color picker function */
 
     $(function () {
-        $('#color-picker').colorpicker({
-            customClass: 'custom-size',
+        $("#color-picker").colorpicker({
+            customClass: "custom-size",
             sliders: {
                 saturation: {
                     maxLeft: 250,
