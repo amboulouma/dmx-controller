@@ -47,9 +47,12 @@ $(document).ready(function(){
     $trameGlobale.append($spanTramGlobale);
 
     $("#container").prepend($trameGlobale);
-    
 
-   
+    /* Load config from JSON file */
+
+    jQuery.getJSON('dmx-config.json', function (data) {
+        console.log(data);
+    });
 
     /* Function to create a DMX Component */
 
