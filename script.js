@@ -1,16 +1,24 @@
 $(document).ready(function(){
 
-    createComponent("#component-list", "Spot scène PAR56 LED RGB", "par-56-led-rgb-0", 7, 0);
 
     /* Spot scène PAR56 LED RGB * 4 */
 
-    function createComponent(parent, name, componentId, channels, beginninAdress) {
+    var beginningAdress = 0;
+
+    for (var i = 0; i<4; i++) {
+        createDMXComponent("#component-list", "Spot scène PAR56 LED RGB", "par-56-led-rgb-0", 7, beginningAdress);
+        beginningAdress += 7;
+    }
+
+    /* Function to create a DMX Component */
+
+    function createDMXComponent(parent, name, componentId, channels, beginninAdress) {
         var $div = $("<div>", {id: componentId, class: "mb-1 dmx-component"}).css("margin", "5px"); 
         var $name = $("<h4>").append(name);
         $div.append($name);
         for (var i = 0; i<channels; i++) {
             createDMXChannel($div, componentId, i, beginninAdress);
-            beginninAdress+= 1;
+            beginninAdress += 1;
         }
         $(parent).append($div);
     }
