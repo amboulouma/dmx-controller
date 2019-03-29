@@ -4,7 +4,6 @@ $(document).ready(function(){
 
     /* Spot scène PAR56 LED RGB * 4 */
 
-
     for (var i = 0; i<4; i++) {
         createDMXComponent("#component-list", "Spot scène PAR56 LED RGB " + i, "par-56-led-rgb-" + i, 7, beginningAdress);
         if (i<4) beginningAdress += 7;
@@ -12,10 +11,37 @@ $(document).ready(function(){
 
     /* Stroboscope */
 
-    for (var i = 0; i<4; i++) {
-        createDMXComponent("#component-list", "Stroboscope " + i, "strobo-" + i, 4, beginningAdress);
-        if (i<4) beginningAdress += 4;
-    }
+    createDMXComponent("#component-list", "Stroboscope ", "strobo-0", 4, beginningAdress);
+    beginningAdress += 4;
+
+    /* iMove 5S */
+
+    createDMXComponent("#component-list", "iMove 5S ", "imove-0", 5, beginningAdress);
+    beginningAdress += 5;
+
+    /* iColor 4*/
+        
+    createDMXComponent("#component-list", "iColor 4", "icolor-0", 4, beginningAdress);
+    beginningAdress += 4;
+
+    /* Starway */
+
+    createDMXComponent("#component-list", "Starway", "starway-0", 4, beginningAdress);
+    beginningAdress += 4;
+
+    /* Laser ILDA */
+
+    createDMXComponent("#component-list", "Laser de spectacle ILDA", "ilda-0", 24, beginningAdress);
+    beginningAdress += 24;
+
+    /* Constitution de la trame globale */
+
+    var hexValues = [];
+    $(".dmx-hex-value").toArray().forEach(element => {
+        hexValues.push(element.innerHTML);
+    });
+    $("#component-list").prepend("[" + hexValues.join(", ") + "]");
+    
 
     /* Function to create a DMX Component */
 
