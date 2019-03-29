@@ -40,8 +40,16 @@ $(document).ready(function(){
     $(".dmx-hex-value").toArray().forEach(element => {
         hexValues.push(element.innerHTML);
     });
-    $("#component-list").prepend("[" + hexValues.join(", ") + "]");
+
+    $trameGlobale = $("<div>", {id: "trame-globale", class: "trame-globale"})
+    $spanTramGlobale = $("<span>", {id: "trame-globale-text"}).append("[" + hexValues.join(", ") + "]");
+    $trameGlobale.append($("<h4>").append("Trame globale"));
+    $trameGlobale.append($spanTramGlobale);
+
+    $("#container").prepend($trameGlobale);
     
+
+   
 
     /* Function to create a DMX Component */
 
@@ -100,6 +108,11 @@ $(document).ready(function(){
 
         $slider.on("change", function(changeEvt) {
             $spanHexValue.text(sliderToHex(changeEvt.target.value));
+            var hexValues = [];
+            $(".dmx-hex-value").toArray().forEach(element => {
+                hexValues.push(element.innerHTML);
+            });
+            $("#trame-globale-text").text("[" + hexValues.join(", ") + "]");
         });
         
         $div.append($spanAdress);
@@ -110,6 +123,7 @@ $(document).ready(function(){
         
         $(parent).append($div);
     }
+
     
     function sliderToPercent($param) {
         return $param*0.05;
