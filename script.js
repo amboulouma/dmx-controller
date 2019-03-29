@@ -1,13 +1,20 @@
 $(document).ready(function(){
 
+    var beginningAdress = 0;
 
     /* Spot scène PAR56 LED RGB * 4 */
 
-    var beginningAdress = 0;
 
     for (var i = 0; i<4; i++) {
-        createDMXComponent("#component-list", "Spot scène PAR56 LED RGB", "par-56-led-rgb-0", 7, beginningAdress);
-        beginningAdress += 7;
+        createDMXComponent("#component-list", "Spot scène PAR56 LED RGB " + i, "par-56-led-rgb-" + i, 7, beginningAdress);
+        if (i<4) beginningAdress += 7;
+    }
+
+    /* Stroboscope */
+
+    for (var i = 0; i<4; i++) {
+        createDMXComponent("#component-list", "Stroboscope " + i, "strobo-" + i, 4, beginningAdress);
+        if (i<4) beginningAdress += 4;
     }
 
     /* Function to create a DMX Component */
