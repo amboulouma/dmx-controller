@@ -11,28 +11,28 @@ $(document).ready(function(){
 
     /* Stroboscope */
 
-    createDMXComponent("#component-list", "Stroboscope ", "strobo-0", 4, beginningAdress);
+    createDMXComponent("#component-list", "Stroboscope ", "strobo", 4, beginningAdress);
     beginningAdress += 4;
 
     /* iMove 5S */
 
-    createDMXComponent("#component-list", "iMove 5S ", "imove-0", 5, beginningAdress);
+    createDMXComponent("#component-list", "iMove 5S ", "imove", 5, beginningAdress);
     beginningAdress += 5;
 
     /* iColor 4*/
         
-    createDMXComponent("#component-list", "iColor 4", "icolor-0", 4, beginningAdress);
-    beginningAdress += 4;
-
-    /* Starway */
-
-    createDMXComponent("#component-list", "Starway", "starway-0", 4, beginningAdress);
+    createDMXComponent("#component-list", "iColor 4", "icolor", 4, beginningAdress);
     beginningAdress += 4;
 
     /* Laser ILDA */
 
-    createDMXComponent("#component-list", "Laser de spectacle ILDA", "ilda-0", 24, beginningAdress);
+    createDMXComponent("#component-list", "Laser de spectacle ILDA", "ilda", 24, beginningAdress);
     beginningAdress += 24;
+
+    /* Starway */
+
+    createDMXComponent("#component-list", "Starway", "starway", 4, beginningAdress);
+    beginningAdress += 4;
 
     /* Constitution de la trame globale */
 

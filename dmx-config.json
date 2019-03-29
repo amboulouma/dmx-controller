@@ -1,0 +1,304 @@
+{
+    "par56-led-rgb-0": {
+        "channel-0": {
+            "adress": 0,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 1,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 2,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 3,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 4,
+            "hex-value":"0x7F"
+        },
+        "channel-5": {
+            "adress": 5,
+            "hex-value":"0x8C"
+        },
+        "channel-6": {
+            "adress": 6,
+            "hex-value":"0xA5"
+        }
+    },
+        
+    "par56-led-rgb-1": {
+        "channel-0": {
+            "adress": 7,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 8,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 9,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 10,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 11,
+            "hex-value":"0x7F"
+        },
+        "channel-5": {
+            "adress": 12,
+            "hex-value":"0x8C"
+        },
+        "channel-6": {
+            "adress": 13,
+            "hex-value":"0xA5"
+        }
+    },
+
+    "par56-led-rgb-2": {
+        "channel-0": {
+            "adress": 14,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 15,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 16,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 17,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 18,
+            "hex-value":"0x7F"
+        },
+        "channel-5": {
+            "adress": 19,
+            "hex-value":"0x8C"
+        },
+        "channel-6": {
+            "adress": 20,
+            "hex-value":"0xA5"
+        }
+    },
+
+    "par56-led-rgb-3": {
+        "channel-0": {
+            "adress": 21,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 22,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 23,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 24,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 25,
+            "hex-value":"0x7F"
+        },
+        "channel-5": {
+            "adress": 26,
+            "hex-value":"0x8C"
+        },
+        "channel-6": {
+            "adress": 27,
+            "hex-value":"0xA5"
+        }
+    },
+
+    "strobo": {
+        "channel-0": {
+            "adress": 28,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 29,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 30,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 31,
+            "hex-value":"0x7F"
+        }
+    },
+
+    "imove": {
+        "channel-0": {
+            "adress": 32,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 33,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 34,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 35,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 36,
+            "hex-value":"0x7F"
+        }
+    },
+
+    "icolor": {
+        "channel-0": {
+            "adress": 37,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 38,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 39,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 40,
+            "hex-value":"0x7F"
+        }
+    },
+
+    "ilda": {
+        "channel-0": {
+            "adress": 41,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 42,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 43,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 44,
+            "hex-value":"0x7F"
+        },
+        "channel-4": {
+            "adress": 45,
+            "hex-value":"0x7F"
+        },
+        "channel-5": {
+            "adress": 46,
+            "hex-value":"0x8C"
+        },
+        "channel-6": {
+            "adress": 47,
+            "hex-value":"0xA5"
+        },
+        "channel-7": {
+            "adress": 48,
+            "hex-value":"0xCC"
+        },
+        "channel-8": {
+            "adress": 49,
+            "hex-value":"0xCC"
+        },
+        "channel-9": {
+            "adress": 50,
+            "hex-value":"0x59"
+        },
+        "channel-10": {
+            "adress": 51,
+            "hex-value":"0x7F"
+        },
+        "channel-11": {
+            "adress": 52,
+            "hex-value":"0x7F"
+        },
+        "channel-12": {
+            "adress": 53,
+            "hex-value":"0x8C"
+        },
+        "channel-13": {
+            "adress": 54,
+            "hex-value":"0xA5"
+        },
+        "channel-14": {
+            "adress": 55,
+            "hex-value":"0xCC"
+        },
+        "channel-15": {
+            "adress": 56,
+            "hex-value":"0xCC"
+        },
+        "channel-16": {
+            "adress": 57,
+            "hex-value":"0x59"
+        },
+        "channel-17": {
+            "adress": 58,
+            "hex-value":"0x7F"
+        },
+        "channel-18": {
+            "adress": 59,
+            "hex-value":"0x7F"
+        },
+        "channel-19": {
+            "adress": 60,
+            "hex-value":"0x8C"
+        },
+        "channel-20": {
+            "adress": 61,
+            "hex-value":"0xA5"
+        },
+        "channel-21": {
+            "adress": 62,
+            "hex-value":"0xCC"
+        },
+        "channel-22": {
+            "adress": 63,
+            "hex-value":"0xCC"
+        },
+        "channel-23": {
+            "adress": 64,
+            "hex-value":"0x59"
+        }
+    },
+
+    "straway": {
+        "channel-0": {
+            "adress": 65,
+            "hex-value":"0xCC"
+        },
+        "channel-1": {
+            "adress": 66,
+            "hex-value":"0xCC"
+        },
+        "channel-2": {
+            "adress": 67,
+            "hex-value":"0x59"
+        },
+        "channel-3": {
+            "adress": 68,
+            "hex-value":"0x7F"
+        }
+    }
+}
